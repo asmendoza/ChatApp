@@ -1,0 +1,32 @@
+* ServerSocket --> accept() connection
+* Socket (client)
+    --> getOutputStream()
+    --> getInputStream()
+* Worker Thread to handle client connections
+* Accept multiple connection
+
+User Presence
+Protocols
+
+User & Server
+1. User --> Server
+    * login / logoff
+    * status
+2. Server --> User
+    * send online / offline status of users
+3. User --> User
+    * sending direct messages
+    * broadcast message to all users
+
+Commands
+    login <user> <password>
+    logoff
+    quit
+    msg <user> <messagebody>
+        guest: "msg jim Hello World" <-- sent
+        jim: msg guest Hello World <-- receive
+    #topic <-- chatroom / group chat
+    join <topic>
+    msg <topic> <messagebody>
+    send: msg #topic messagebody
+    recv: login(#topic): body
